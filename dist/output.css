@@ -804,6 +804,10 @@ video {
   height: 160px;
 }
 
+.h-\[336px\] {
+  height: 336px;
+}
+
 .h-\[56px\] {
   height: 56px;
 }
@@ -822,6 +826,46 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[calc\(25\%-37px\)\] {
+  width: calc(25% - 37px);
+}
+
+.w-\[calc\(25\%-37\2c 5px\)\] {
+  width: calc(25% - 37,5px);
+}
+
+.w-\[264px\] {
+  width: 264px;
+}
+
+.w-\[26\] {
+  width: 26;
+}
+
+.w-\[260px\] {
+  width: 260px;
+}
+
+.w-\[calc\(25\%-375px\)\] {
+  width: calc(25% - 375px);
+}
+
+.w-\[calc\(25\%_37px\)\] {
+  width: calc(25% 37px);
+}
+
+.w-\[calc\(25\%37px\)\] {
+  width: calc(25%37px);
+}
+
+.w-\[300px\] {
+  width: 300px;
+}
+
+.w-\[267px\] {
+  width: 267px;
 }
 
 .flex-shrink {
@@ -1348,12 +1392,16 @@ video {
   gap: 0.5rem;
 }
 
-.gap-\[\] {
-  gap: ;
-}
-
 .gap-\[37\.5px\] {
   gap: 37.5px;
+}
+
+.gap-\[37px\] {
+  gap: 37px;
+}
+
+.gap-\[75px\] {
+  gap: 75px;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1656,16 +1704,16 @@ video {
   border-radius: 0.25rem;
 }
 
+.rounded-\[5px\] {
+  border-radius: 5px;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
 
 .rounded-xl {
   border-radius: 0.75rem;
-}
-
-.rounded-\[5px\] {
-  border-radius: 5px;
 }
 
 .rounded-b {
@@ -1927,10 +1975,6 @@ video {
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-\[5px\] {
-  padding: 5px;
 }
 
 .px-2 {
@@ -2544,6 +2588,12 @@ video {
   font-weight: 700;
 }
 
+.hover\:shadow-2xl:hover {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .before\:hover\:text-center:hover::before {
   content: var(--tw-content);
   text-align: center;
@@ -2563,6 +2613,20 @@ video {
 }
 
 @media (prefers-color-scheme: dark) {
+  .dark\:bg-\[\#202C36\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(32 44 54 / var(--tw-bg-opacity));
+  }
+
+  .dark\:bg-\[\#2B3844\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(43 56 68 / var(--tw-bg-opacity));
+  }
+
+  .dark\:bg-\[\] {
+    background-color: ;
+  }
+
   .dark\:text-gray-400 {
     --tw-text-opacity: 1;
     color: rgb(156 163 175 / var(--tw-text-opacity));
