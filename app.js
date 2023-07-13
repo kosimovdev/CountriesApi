@@ -24,12 +24,11 @@ getCountries();
 
 function renderCountries(data) {
   let res = "";
-  // console.log(data)
 
   if (data.length) {
     data.forEach((el) => {
       res += `
-                 <div class="card w-[267px] h-[336px] dark:bg-[#2B3844] box-border hover:shadow-2xl">
+                 <div class="card w-[267px] min-h-[336px] box-border hover:shadow-2xl">
                     <img class="w-full h-[160px] object-cover rounded-[5px]" src="${
                       el.flags.svg
                     }" alt="img">
@@ -43,13 +42,13 @@ function renderCountries(data) {
                         <p class="text-[14px] mb-[8px] font-semibold leading-[16px]"><strong>Region: </strong> ${
                           el.region
                         }</p>
-                        <p class="text-[14px] font-semibold leading-[16px]"><strong>Capital: </strong> ${
+                        <p class="text-[14px] mb-3 font-semibold leading-[16px]"><strong>Capital: </strong> ${
                           el?.capital ? el?.capital : " capital is not fount"
                         } </p>
+                        <a href="./index2.html" target="_blank" data-fullname='${el?.name}' class="px-3 py-2 bg-cyan-600 rounded-xl">Details</a>
                     </div>
                    </div>
       `;
-
       $(".wrapper").innerHTML = res;
     });
   }
@@ -119,3 +118,10 @@ async function renderRegions(text) {
 }
 
 // <------ SORT BY REGION ------>
+
+$('.wrapper').addEventListener('click', (e) => {
+  if(e.target.classList.contains('bg-cyan-600')){
+    localStorage.setItem('fullname', e.target.getAttribute('data-fullname'))
+  }
+  console.log(e.target.getAttribute('data-fullname'))
+})
