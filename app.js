@@ -45,7 +45,9 @@ function renderCountries(data) {
                         <p class="text-[14px] mb-3 font-semibold leading-[16px]"><strong>Capital: </strong> ${
                           el?.capital ? el?.capital : " capital is not fount"
                         } </p>
-                        <a href="./index2.html" target="_blank" data-fullname='${el?.name}' class="px-3 py-2 bg-cyan-600 rounded-xl">Details</a>
+                        <a href="./index2.html" target="_blank" data-code='${
+                          el?.alpha3Code
+                        }' class="px-3 py-2 bg-cyan-600 rounded-xl">Details</a>
                     </div>
                    </div>
       `;
@@ -119,9 +121,9 @@ async function renderRegions(text) {
 
 // <------ SORT BY REGION ------>
 
-$('.wrapper').addEventListener('click', (e) => {
-  if(e.target.classList.contains('bg-cyan-600')){
-    localStorage.setItem('fullname', e.target.getAttribute('data-fullname'))
+$(".wrapper").addEventListener("click", (e) => {
+  if (e.target.classList.contains("bg-cyan-600")) {
+    localStorage.setItem("code", e.target.getAttribute("data-code"));
   }
-  console.log(e.target.getAttribute('data-fullname'))
-})
+  console.log(e.target.getAttribute("data-code"));
+});

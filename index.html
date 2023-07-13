@@ -1,68 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <!-- build css -->
     <link rel="stylesheet" href="./dist/output.css" />
-    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/style.css" />
     <title>starter</title>
-</head>
+  </head>
 
-<body class="dark:bg-[#202C36]">
+  <body class="dark:bg-[#202C36]">
     <header>
-        <div class="container mx-auto shadow-sm px-[20px] flex items-center justify-between py-[24px]">
-            <h1 class="text-[24px] font-bold dark:text-white">Where in the world?</h1>
-            <div class="flex items-center gap-1 cursor-pointer border-2 py-1 px-2">
-                <i class="bx bx-moon text-[20px] dark:text-white"></i>
-                <p class="text-[16px] dark:text-white">Dark mode</p>
-            </div>
+      <div
+        class="container mx-auto shadow-sm px-[20px] flex items-center justify-between py-[24px]"
+      >
+        <h1 class="text-[24px] font-bold dark:text-white">
+          Where in the world?
+        </h1>
+        <div class="flex items-center gap-1 cursor-pointer border-2 py-1 px-2">
+          <i class="bx bx-moon text-[20px] dark:text-white"></i>
+          <p class="text-[16px] dark:text-white">Dark mode</p>
         </div>
+      </div>
     </header>
     <main class="pt-[50px]">
-        <section>
-            <div class="container mx-auto flex justify-between">
-                <form class="w-[480px] h-[56px]">
-                    <label for="default-search"
-                        class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                    <div class="relative">
-                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                            </svg>
-                        </div>
+      <section>
+        <div class="container mx-auto flex justify-between">
+          <form class="w-[480px] h-[56px]">
+            <label
+              for="default-search"
+              class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+              >Search</label
+            >
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+              </div>
 
-                        <div class="flex items-center gap-2">
-                            <input type="search" id="search"
-                                class="block w-full p-4 pl-10 text-sm dark:bg-[#2B3844]  dark:text-white text-gray-900 border border-gray-300 rounded-lg bg-gray-50" 
-                                placeholder="Search for a country…" required />
-                            <!-- <select id="search-by"
+              <div class="flex items-center gap-2">
+                <input
+                  type="search"
+                  id="search"
+                  class="block w-full p-4 pl-10 text-sm dark:bg-[#2B3844] dark:text-white text-gray-900 border border-gray-300 rounded-lg bg-gray-50"
+                  placeholder="Search for a country…"
+                  required
+                />
+                <!-- <select id="search-by"
                                 class="h-[56px] w[200px] py-[18px] px-[24px] border-[1px] border-silver rounded-xl">
                                 <option disabled selected>Search by:</option>
                             </select> -->
-                        </div>
-                    </div>
-                </form>
-                <select id="region" class="h-[56px] w[200px] py-[18px] px-[24px] border-[1px] border-silver rounded-xl dark:bg-[#2B3844] dark:text-white">
-                    <option disabled selected>Filter by Region</option>
-                </select>
+              </div>
             </div>
-        </section>
-        <section>
-            <div class="container mx-auto">
-                <div class="wrapper pt-[48px] flex flex-wrap gap-[75px] items-center justify-between">
-                </div>
-            </div>
-        </section>
+          </form>
+          <select
+            id="region"
+            class="h-[56px] w[200px] py-[18px] px-[24px] border-[1px] border-silver rounded-xl dark:bg-[#2B3844] dark:text-white"
+          >
+            <option disabled selected>Filter by Region</option>
+          </select>
+        </div>
+      </section>
+      <section>
+        <div class="container mx-auto">
+          <div
+            class="wrapper pt-[48px] flex flex-wrap gap-[75px] items-center justify-between"
+          ></div>
+        </div>
+      </section>
     </main>
-</body>
-<script src="./utils.js"></script>
-<script src="./app.js"></script>
+    <div class="loader-wraapper fixed top-0 left-0 w-[100vh]">
+      <span>loading...</span>
+    </div>
+  </body>
+  <script src="./utils.js"></script>
+  <script src="./app.js"></script>
 </html>
